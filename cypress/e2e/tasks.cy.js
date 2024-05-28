@@ -16,5 +16,7 @@ describe('tasks', () => {
         
         cy.get('input[placeholder="Add a new Task"]').type('Read a book')
         cy.contains('button', 'Create').click()
+    
+        cy.contains('main div p', 'Read a book').should('be.visible')
     })
 })
